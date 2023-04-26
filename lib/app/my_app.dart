@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_rest_api_bloc_clean_arch/features/auth/login/presentation/cubit/login_cubit.dart';
-import 'package:flutter_rest_api_bloc_clean_arch/features/auth/login/presentation/view/login_view.dart';
+import 'package:flutter_rest_api_bloc_clean_arch/features/auth/presentation/cubit/auth_cubit.dart';
 import 'package:flutter_rest_api_bloc_clean_arch/features/home/presenation/view/splash_screen.dart';
 
 class MyApp extends StatelessWidget {
@@ -12,7 +11,7 @@ class MyApp extends StatelessWidget {
     return MultiBlocProvider(
       providers: [
         BlocProvider(
-          create: (context) => LoginCubit(),
+          create: (context) => AuthCubit(),
         )
       ],
       child: MaterialApp(
